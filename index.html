@@ -79,14 +79,14 @@
         .info-row .key{color:var(--text3);font-size:.82rem;font-weight:500}.info-row .val{font-size:.88rem;font-weight:600}
 
         /* Portfolio */
-        .portfolio-section{max-width:1200px;margin:0 auto}
-        .filter-bar{display:flex;gap:.5rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap}
+        .portfolio-section{max-width:1100px;margin:0 auto}
+        .filter-bar{display:flex;gap:.5rem;justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap}
         .filter-btn{padding:.5rem 1.2rem;border-radius:50px;background:var(--surface);border:1px solid var(--border);color:var(--text2);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s;font-family:inherit}
         .filter-btn:hover{border-color:var(--text3)}
         .filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-        .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+        .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
         .project-card{background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light);cursor:pointer;transition:all .4s ease;box-shadow:var(--shadow)}
-        .project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--border)}
+        .project-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.1);border-color:var(--border)}
         .project-card .card-img{position:relative;overflow:hidden}
         .project-card .card-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .5s ease}
         .project-card:hover .card-img img{transform:scale(1.03)}
@@ -94,12 +94,12 @@
         .project-card .card-img .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,0.6),transparent 50%);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.2rem}
         .project-card:hover .card-img .overlay{opacity:1}
         .project-card .card-img .overlay span{color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.5px}
-        .project-card .card-body{padding:1.2rem 1.3rem}
-        .project-card .card-body .card-tag{font-size:.65rem;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;display:block;margin-bottom:.3rem}
-        .project-card .card-body h3{font-size:1rem;font-weight:700;margin-bottom:.3rem;line-height:1.3}
-        .project-card .card-body .card-sub{font-size:.8rem;color:var(--text2);margin-bottom:.8rem}
+        .project-card .card-body{padding:1.3rem 1.4rem}
+        .project-card .card-body .card-tag{font-size:.65rem;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;display:block;margin-bottom:.4rem}
+        .project-card .card-body h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem;line-height:1.3}
+        .project-card .card-body .card-sub{font-size:.8rem;color:var(--text2);margin-bottom:.9rem;line-height:1.5}
         .project-card .card-body .card-tools{display:flex;gap:.4rem;flex-wrap:wrap}
-        .project-card .card-body .card-tools span{padding:.2rem .6rem;border-radius:var(--radius-xs);background:var(--bg);font-size:.68rem;color:var(--text2);font-weight:500;border:1px solid var(--border-light)}
+        .project-card .card-body .card-tools span{padding:.25rem .65rem;border-radius:var(--radius-xs);background:var(--bg);font-size:.68rem;color:var(--text2);font-weight:500;border:1px solid var(--border-light)}
 
         /* Detail Overlay */
         .detail-overlay{position:fixed;inset:0;z-index:9998;background:var(--bg);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease}
@@ -117,15 +117,24 @@
         .detail-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem}
         .detail-hero p{color:var(--text2);font-size:.95rem;line-height:1.8;max-width:650px;margin:0 auto}
 
-        .detail-gallery{max-width:1100px;margin:2.5rem auto;padding:0 3rem;display:flex;flex-direction:column;gap:1.5rem}
-        .gallery-row{display:grid;gap:1.5rem}
-        .gallery-row.two-col{grid-template-columns:1fr 1fr}
-        .gallery-row.single{grid-template-columns:1fr}
-        .gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow);transition:all .4s ease;background:var(--surface)}
-        .gallery-item:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-        .gallery-item img{width:100%;display:block;object-fit:cover}
-        .gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.3rem;background:linear-gradient(to top,rgba(26,26,26,0.7),transparent);font-size:.75rem;color:rgba(255,255,255,0.9);font-weight:500;opacity:0;transition:opacity .3s}
-        .gallery-item:hover .gallery-caption{opacity:1}
+        /* Carousel Gallery */
+        .detail-gallery{max-width:900px;margin:2.5rem auto;padding:0 3rem}
+        .carousel{position:relative}
+        .carousel-viewport{overflow:hidden;border-radius:var(--radius);border:1px solid var(--border-light);box-shadow:var(--shadow-lg);background:var(--surface)}
+        .carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
+        .carousel-slide{min-width:100%;flex-shrink:0}
+        .carousel-slide .slide-img{width:100%;padding-top:60%;position:relative}
+        .carousel-slide .slide-caption{padding:1rem 1.5rem;background:var(--surface);border-top:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between}
+        .carousel-slide .slide-caption .cap-title{font-size:.88rem;font-weight:600}
+        .carousel-slide .slide-caption .cap-num{font-size:.72rem;color:var(--text3);font-weight:500}
+        .carousel-btn{position:absolute;top:50%;transform:translateY(-70%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.95);border:1px solid var(--border-light);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--text);box-shadow:var(--shadow);transition:all .3s;z-index:5;backdrop-filter:blur(8px)}
+        .carousel-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+        .carousel-btn.prev{left:-22px}
+        .carousel-btn.next{right:-22px}
+        .carousel-btn:disabled{opacity:.3;cursor:default;pointer-events:none}
+        .carousel-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.2rem}
+        .carousel-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:all .3s;padding:0}
+        .carousel-dot.active{background:var(--accent);width:24px;border-radius:4px}
 
         .detail-meta{max-width:800px;margin:2.5rem auto;padding:0 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
         .meta-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:1.2rem;text-align:center;box-shadow:var(--shadow)}
@@ -202,7 +211,8 @@
             .contact-grid{grid-template-columns:1fr}
             .skills-grid{grid-template-columns:1fr 1fr}
             .detail-header{padding:.8rem 1.5rem}.detail-hero{padding:3rem 1.5rem 2rem}
-            .detail-gallery{padding:0 1.5rem}.gallery-row.two-col{grid-template-columns:1fr}
+            .detail-gallery{padding:0 1.5rem}
+            .carousel-btn.prev{left:8px}.carousel-btn.next{right:8px}
             .detail-meta{padding:0 1.5rem;grid-template-columns:1fr}.detail-description{padding:0 1.5rem}
         }
         @media(max-width:600px){
@@ -226,7 +236,7 @@
     <div class="hero-inner">
         <div class="hero-left">
             <div class="hero-label reveal">GRAPHIC DESIGNER</div>
-            <h1 class="reveal reveal-delay-1">唐彬<br><span style="font-size:.45em;color:var(--text2);font-family:'DM Sans',sans-serif;font-weight:400">Tang Bin · Portfolio 2026</span></h1>
+            <h1 class="reveal reveal-delay-1">作品集<br><span style="font-size:.38em;color:var(--text2);font-family:'DM Sans',sans-serif;font-weight:400">Tang Bin · Portfolio 2026</span></h1>
             <p class="subtitle reveal reveal-delay-2">专注品牌视觉与创意设计，擅长将概念转化为有冲击力的视觉表达。用设计讲述故事，以创意驱动价值。</p>
             <div class="hero-btns reveal reveal-delay-3">
                 <a href="#portfolio" class="btn-dark">浏览作品</a>
@@ -457,24 +467,35 @@ function buildGrid() {
 buildFilters();
 buildGrid();
 
+let carouselIdx = 0;
+let carouselTotal = 0;
+
 function openDetail(idx) {
     currentDetail = idx;
     const p = projects[idx];
     const el = document.getElementById('detailContent');
 
-    let galleryHTML = '<div class="detail-gallery">';
+    // Flatten all gallery images into slides
+    const slides = [];
     p.gallery.forEach(row => {
-        galleryHTML += `<div class="gallery-row ${row.layout === 'two-col' ? 'two-col' : 'single'}">`;
-        row.imgs.forEach(item => {
-            galleryHTML += `
-                <div class="gallery-item">
-                    <div style="width:100%;padding-top:60%;background:url('${item.src}') no-repeat;background-size:100% auto;background-position:${item.crop};border-radius:var(--radius)"></div>
-                    <div class="gallery-caption">${item.cap}</div>
-                </div>`;
-        });
-        galleryHTML += '</div>';
+        row.imgs.forEach(item => slides.push(item));
     });
-    galleryHTML += '</div>';
+    carouselTotal = slides.length;
+    carouselIdx = 0;
+
+    let slidesHTML = slides.map((s, i) => `
+        <div class="carousel-slide">
+            <div class="slide-img" style="background:url('${s.src}') no-repeat;background-size:100% auto;background-position:${s.crop}"></div>
+            <div class="slide-caption">
+                <span class="cap-title">${s.cap}</span>
+                <span class="cap-num">${i + 1} / ${carouselTotal}</span>
+            </div>
+        </div>
+    `).join('');
+
+    let dotsHTML = slides.map((_, i) =>
+        `<button class="carousel-dot ${i === 0 ? 'active' : ''}" onclick="goSlide(${i})"></button>`
+    ).join('');
 
     el.innerHTML = `
         <div class="detail-hero">
@@ -482,7 +503,16 @@ function openDetail(idx) {
             <h1>${p.title}</h1>
             <p>${p.desc}</p>
         </div>
-        ${galleryHTML}
+        <div class="detail-gallery">
+            <div class="carousel">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">${slidesHTML}</div>
+                </div>
+                <button class="carousel-btn prev" id="carouselPrev" onclick="goSlide(carouselIdx-1)">&larr;</button>
+                <button class="carousel-btn next" id="carouselNext" onclick="goSlide(carouselIdx+1)">&rarr;</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots">${dotsHTML}</div>
+        </div>
         <div class="detail-meta">
             <div class="meta-card"><div class="meta-label">项目年份</div><div class="meta-value">${p.year}</div></div>
             <div class="meta-card"><div class="meta-label">项目类型</div><div class="meta-value">${p.category}</div></div>
@@ -499,6 +529,22 @@ function openDetail(idx) {
     document.body.style.overflow = 'hidden';
 }
 
+function goSlide(i) {
+    if (i < 0 || i >= carouselTotal) return;
+    carouselIdx = i;
+    const track = document.getElementById('carouselTrack');
+    if (track) track.style.transform = `translateX(-${i * 100}%)`;
+    // Update dots
+    document.querySelectorAll('#carouselDots .carousel-dot').forEach((d, idx) => {
+        d.classList.toggle('active', idx === i);
+    });
+    // Update buttons
+    const prev = document.getElementById('carouselPrev');
+    const next = document.getElementById('carouselNext');
+    if (prev) prev.disabled = i === 0;
+    if (next) next.disabled = i === carouselTotal - 1;
+}
+
 function closeDetail() {
     document.getElementById('detailOverlay').classList.remove('active');
     document.body.style.overflow = '';
@@ -513,6 +559,8 @@ function navDetail(dir) {
 document.addEventListener('keydown', e => {
     if (!document.getElementById('detailOverlay').classList.contains('active')) return;
     if (e.key === 'Escape') closeDetail();
+    if (e.key === 'ArrowLeft') goSlide(carouselIdx - 1);
+    if (e.key === 'ArrowRight') goSlide(carouselIdx + 1);
 });
 
 // Nav & Menu
