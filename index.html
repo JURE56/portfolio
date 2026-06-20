@@ -118,20 +118,23 @@
         .detail-hero p{color:var(--text2);font-size:.95rem;line-height:1.8;max-width:650px;margin:0 auto}
 
         /* Carousel Gallery */
-        .detail-gallery{max-width:900px;margin:2.5rem auto;padding:0 3rem}
+        .detail-gallery{max-width:800px;margin:2.5rem auto;padding:0 3rem}
         .carousel{position:relative}
-        .carousel-viewport{overflow:hidden;border-radius:var(--radius);border:1px solid var(--border-light);box-shadow:var(--shadow-lg);background:var(--surface)}
+        .carousel-viewport{overflow:hidden;border-radius:20px;background:var(--surface);box-shadow:var(--shadow-lg)}
         .carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
-        .carousel-slide{min-width:100%;flex-shrink:0}
-        .carousel-slide .slide-img{width:100%;padding-top:60%;position:relative}
-        .carousel-slide .slide-caption{padding:1rem 1.5rem;background:var(--surface);border-top:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between}
-        .carousel-slide .slide-caption .cap-title{font-size:.88rem;font-weight:600}
-        .carousel-slide .slide-caption .cap-num{font-size:.72rem;color:var(--text3);font-weight:500}
-        .carousel-btn{position:absolute;top:50%;transform:translateY(-70%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.95);border:1px solid var(--border-light);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--text);box-shadow:var(--shadow);transition:all .3s;z-index:5;backdrop-filter:blur(8px)}
-        .carousel-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-        .carousel-btn.prev{left:-22px}
-        .carousel-btn.next{right:-22px}
-        .carousel-btn:disabled{opacity:.3;cursor:default;pointer-events:none}
+        .carousel-slide{min-width:100%;flex-shrink:0;background:var(--surface)}
+        .carousel-slide .slide-img-wrap{padding:24px 24px 0}
+        .carousel-slide .slide-img{width:100%;padding-top:56%;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08)}
+        .carousel-slide .slide-info{padding:1.5rem 2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+        .carousel-slide .slide-info .cap-left{display:flex;flex-direction:column;gap:.2rem}
+        .carousel-slide .slide-info .cap-title{font-size:.92rem;font-weight:700;color:var(--text)}
+        .carousel-slide .slide-info .cap-project{font-size:.72rem;color:var(--text3);font-weight:500;letter-spacing:.5px}
+        .carousel-slide .slide-info .cap-num{font-size:.78rem;color:var(--text3);font-weight:600;white-space:nowrap;background:var(--bg);padding:.3rem .8rem;border-radius:50px;border:1px solid var(--border-light)}
+        .carousel-btn{position:absolute;top:45%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.95);border:1px solid var(--border-light);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--text);box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:all .3s;z-index:5;backdrop-filter:blur(8px)}
+        .carousel-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+        .carousel-btn.prev{left:-23px}
+        .carousel-btn.next{right:-23px}
+        .carousel-btn:disabled{opacity:.25;cursor:default;pointer-events:none}
         .carousel-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.2rem}
         .carousel-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:all .3s;padding:0}
         .carousel-dot.active{background:var(--accent);width:24px;border-radius:4px}
@@ -485,9 +488,14 @@ function openDetail(idx) {
 
     let slidesHTML = slides.map((s, i) => `
         <div class="carousel-slide">
-            <div class="slide-img" style="background:url('${s.src}') no-repeat;background-size:100% auto;background-position:${s.crop}"></div>
-            <div class="slide-caption">
-                <span class="cap-title">${s.cap}</span>
+            <div class="slide-img-wrap">
+                <div class="slide-img" style="background:url('${s.src}') no-repeat;background-size:100% auto;background-position:${s.crop}"></div>
+            </div>
+            <div class="slide-info">
+                <div class="cap-left">
+                    <span class="cap-project">${p.title}</span>
+                    <span class="cap-title">${s.cap}</span>
+                </div>
                 <span class="cap-num">${i + 1} / ${carouselTotal}</span>
             </div>
         </div>
