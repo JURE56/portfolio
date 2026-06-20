@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        :root{--bg:#07070e;--bg2:#0d0d18;--bg3:#141425;--surface:rgba(255,255,255,0.03);--glass:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.08);--text:#eeeef3;--text2:#8888a0;--text3:#55556a;--purple:#7c5cfc;--purple-glow:rgba(124,92,252,0.3);--cyan:#00d4ff;--pink:#ff5ca8;--gradient:linear-gradient(135deg,#7c5cfc,#00d4ff);--gradient2:linear-gradient(135deg,#7c5cfc,#ff5ca8)}
+        :root{--bg:#050505;--bg2:#0a0a0a;--bg3:#111111;--surface:rgba(255,255,255,0.03);--glass:rgba(255,255,255,0.04);--glass-border:rgba(255,255,255,0.07);--text:#f0f0f0;--text2:#8a8a8a;--text3:#4a4a4a;--purple:#39ff14;--purple-glow:rgba(57,255,20,0.25);--cyan:#ff6b00;--pink:#ff2d55;--gradient:linear-gradient(135deg,#39ff14,#ff6b00);--gradient2:linear-gradient(135deg,#39ff14,#ff2d55)}
         html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--purple) var(--bg2)}
         html::-webkit-scrollbar{width:6px}html::-webkit-scrollbar-track{background:var(--bg2)}html::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
         body{font-family:'Noto Sans SC','Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
-        .cursor-glow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,92,252,0.06)0%,transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left .3s ease,top .3s ease}
-        nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(7,7,14,0.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);transition:all .4s ease}
-        nav.scrolled{padding:.8rem 3rem;background:rgba(7,7,14,0.92)}
+        .cursor-glow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(57,255,20,0.05)0%,transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left .3s ease,top .3s ease}
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,5,0.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);transition:all .4s ease}
+        nav.scrolled{padding:.8rem 3rem;background:rgba(5,5,5,0.92)}
         .nav-logo{font-size:1.3rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px}
         .nav-links{display:flex;gap:2.5rem;list-style:none}
         .nav-links a{color:var(--text2);text-decoration:none;font-size:.88rem;font-weight:500;letter-spacing:.5px;position:relative;transition:color .3s}
@@ -67,7 +67,7 @@
         .about-text p{color:var(--text2);margin-bottom:1rem;font-size:.95rem}
         .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
         .stat-card{background:var(--surface);border:1px solid var(--glass-border);border-radius:16px;padding:1.5rem;text-align:center;transition:all .3s ease}
-        .stat-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 8px 30px rgba(124,92,252,.1)}
+        .stat-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 8px 30px rgba(57,255,20,.1)}
         .stat-card .num{font-size:2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
         .stat-card .label{font-size:.78rem;color:var(--text2);margin-top:.3rem}
         .about-info{background:var(--surface);border:1px solid var(--glass-border);border-radius:20px;padding:2.5rem;backdrop-filter:blur(10px)}
@@ -83,11 +83,11 @@
         .project-image-wrap{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--glass-border);transition:all .5s ease;box-shadow:0 4px 20px rgba(0,0,0,.3)}
         .project-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
         .project-card:hover .project-image-wrap img{transform:scale(1.04)}
-        .project-card:hover .project-image-wrap{border-color:var(--purple);box-shadow:0 12px 50px rgba(124,92,252,.2)}
+        .project-card:hover .project-image-wrap{border-color:var(--purple);box-shadow:0 12px 50px rgba(57,255,20,.2)}
         .project-image-wrap::after{content:'查看详情 →';position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,14,.85)0%,transparent 60%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.5rem;color:#fff;font-size:.9rem;font-weight:600;letter-spacing:1px;opacity:0;transition:opacity .4s ease}
         .project-card:hover .project-image-wrap::after{opacity:1}
         .project-info{padding:1rem 0}
-        .project-info .project-num{font-size:4.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,rgba(124,92,252,.15),rgba(0,212,255,.08));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.8rem;font-family:'Space Grotesk',sans-serif}
+        .project-info .project-num{font-size:4.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,rgba(57,255,20,.15),rgba(255,107,0,.08));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.8rem;font-family:'Space Grotesk',sans-serif}
         .project-info .project-tag{display:inline-block;padding:.3rem .9rem;border-radius:20px;background:var(--glass);border:1px solid var(--glass-border);font-size:.72rem;color:var(--purple);font-weight:600;margin-bottom:1rem;letter-spacing:1px}
         .project-info h3{font-size:1.6rem;font-weight:800;margin-bottom:.8rem;line-height:1.3}
         .project-info p{color:var(--text2);font-size:.92rem;line-height:1.8;margin-bottom:1.2rem}
@@ -97,7 +97,7 @@
         /* ===== DETAIL PAGE ===== */
         .detail-overlay{position:fixed;inset:0;z-index:9998;background:var(--bg);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease}
         .detail-overlay.active{opacity:1;visibility:visible}
-        .detail-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(7,7,14,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+        .detail-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(5,5,5,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
         .detail-back{display:flex;align-items:center;gap:.5rem;color:var(--text);font-size:.88rem;font-weight:500;cursor:pointer;background:none;border:none;font-family:inherit;transition:color .3s}
         .detail-back:hover{color:var(--purple)}
         .detail-back svg{width:18px;height:18px}
@@ -117,7 +117,7 @@
         .gallery-row.two-col{grid-template-columns:1fr 1fr}
         .gallery-row.single{grid-template-columns:1fr}
         .gallery-item{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--glass-border);box-shadow:0 4px 20px rgba(0,0,0,.3);transition:all .4s ease;background:var(--bg2)}
-        .gallery-item:hover{border-color:var(--purple);box-shadow:0 8px 40px rgba(124,92,252,.15);transform:translateY(-3px)}
+        .gallery-item:hover{border-color:var(--purple);box-shadow:0 8px 40px rgba(57,255,20,.15);transform:translateY(-3px)}
         .gallery-item img{width:100%;display:block;object-fit:cover}
         .gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.5rem;background:linear-gradient(to top,rgba(7,7,14,.9),transparent);font-size:.78rem;color:var(--text2);font-weight:500;opacity:0;transition:opacity .3s}
         .gallery-item:hover .gallery-caption{opacity:1}
@@ -141,7 +141,7 @@
         .skills{background:var(--bg2)}
         .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1000px;margin:0 auto}
         .skill-card{background:var(--surface);border:1px solid var(--glass-border);border-radius:16px;padding:2rem;transition:all .3s ease}
-        .skill-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 8px 30px rgba(124,92,252,.1)}
+        .skill-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 8px 30px rgba(57,255,20,.1)}
         .skill-card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;margin-bottom:1rem}
         .skill-card h4{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
         .skill-card p{font-size:.82rem;color:var(--text2);line-height:1.6}
@@ -151,13 +151,13 @@
         .icon-ai{background:linear-gradient(135deg,#ff9a00,#330000);color:#fff}
         .icon-ae{background:linear-gradient(135deg,#9999ff,#00005b);color:#fff}
         .icon-figma{background:linear-gradient(135deg,#a259ff,#f24e1e);color:#fff}
-        .icon-brand{background:linear-gradient(135deg,#ff5ca8,#7c5cfc);color:#fff}
-        .icon-ui{background:linear-gradient(135deg,#00d4ff,#7c5cfc);color:#fff}
+        .icon-brand{background:linear-gradient(135deg,#ff2d55,#ff6b00);color:#fff}
+        .icon-ui{background:linear-gradient(135deg,#ff6b00,#39ff14);color:#fff}
 
         /* Awards */
         .awards-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
         .award-item{display:flex;align-items:center;gap:1.5rem;background:var(--surface);border:1px solid var(--glass-border);border-radius:12px;padding:1.3rem 1.8rem;transition:all .3s ease}
-        .award-item:hover{border-color:var(--purple);transform:translateX(6px);box-shadow:0 4px 20px rgba(124,92,252,.1)}
+        .award-item:hover{border-color:var(--purple);transform:translateX(6px);box-shadow:0 4px 20px rgba(57,255,20,.1)}
         .award-year{font-size:.78rem;color:var(--purple);font-weight:700;white-space:nowrap;letter-spacing:1px}
         .award-item .divider{width:1px;height:30px;background:var(--glass-border)}
         .award-name{font-size:.92rem;font-weight:500}
@@ -225,7 +225,7 @@
     <div class="section-header reveal"><span class="label">ABOUT ME</span><div class="section-divider"></div><h2>关于 <span class="gradient-text">我</span></h2></div>
     <div class="about-grid">
         <div class="about-text reveal">
-            <div style="margin-bottom:2rem"><div style="width:140px;height:140px;border-radius:50%;border:3px solid var(--purple);overflow:hidden;background:var(--surface);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(124,92,252,.2)"><img src="img-avatar.jpg" alt="个人照片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover"><div style="display:none;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:.75rem;gap:.5rem;text-align:center;padding:.5rem"><span style="font-size:2.5rem">+</span><span>替换为<br>img-avatar.jpg</span></div></div></div>
+            <div style="margin-bottom:2rem"><div style="width:140px;height:140px;border-radius:50%;border:3px solid var(--purple);overflow:hidden;background:var(--surface);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(57,255,20,.2)"><img src="img-avatar.jpg" alt="个人照片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover"><div style="display:none;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:.75rem;gap:.5rem;text-align:center;padding:.5rem"><span style="font-size:2.5rem">+</span><span>替换为<br>img-avatar.jpg</span></div></div></div>
             <h3>用设计连接品牌与用户</h3>
             <p>我是一名专注于品牌视觉与创意设计的平面设计师，毕业于清远市技师学院广告设计专业。在校期间积累了丰富的项目实战经验，从品牌全案设计到IP角色塑造，从海报创意到游戏UI交互，始终追求将美学表达与商业目标完美融合。</p>
             <p>熟练驾驭 Adobe 全家桶与 Figma 等主流设计工具，对视觉趋势保持敏锐洞察。无论是品牌视觉识别系统的构建，还是数字产品的界面设计，都能以专业视角提供完整的创意解决方案。</p>
@@ -263,7 +263,7 @@
 <section id="awards">
     <div class="section-header reveal"><span class="label">ACHIEVEMENTS</span><div class="section-divider"></div><h2>荣誉 <span class="gradient-text">奖项</span></h2><p>在校期间积极参与各类专业竞赛，屡获佳绩</p></div>
     <div class="awards-list">
-        <div class="award-photo reveal" style="margin-bottom:2rem;text-align:center"><img src="img-award.png" alt="奖杯" style="max-width:400px;width:100%;border-radius:12px;border:1px solid var(--glass-border);box-shadow:0 8px 32px rgba(124,92,252,.15)"></div>
+        <div class="award-photo reveal" style="margin-bottom:2rem;text-align:center"><img src="img-award.png" alt="奖杯" style="max-width:400px;width:100%;border-radius:12px;border:1px solid var(--glass-border);box-shadow:0 8px 32px rgba(57,255,20,.15)"></div>
         <div class="award-item reveal"><span class="award-year">2023</span><div class="divider"></div><span class="award-name">清远市技师学院第十七届学生技能大赛 · 获奖</span></div>
         <div class="award-item reveal reveal-delay-1"><span class="award-year">2023</span><div class="divider"></div><span class="award-name">广东省职业技能竞赛 · 铜奖</span></div>
         <div class="award-item reveal reveal-delay-2"><span class="award-year">2023</span><div class="divider"></div><span class="award-name">清远市技师学院"产品摄影"赛项 · 三等奖</span></div>
@@ -464,7 +464,7 @@ const canvas = document.getElementById('particles'), ctx = canvas.getContext('2d
 let particles = [];
 function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
 resizeCanvas();window.addEventListener('resize',resizeCanvas);
-class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.5+.5;this.speedX=(Math.random()-.5)*.3;this.speedY=(Math.random()-.5)*.3;this.opacity=Math.random()*.4+.1}update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x<0||this.x>canvas.width||this.y<0||this.y>canvas.height)this.reset()}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(124,92,252,${this.opacity})`;ctx.fill()}}
+class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.5+.5;this.speedX=(Math.random()-.5)*.3;this.speedY=(Math.random()-.5)*.3;this.opacity=Math.random()*.4+.1}update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x<0||this.x>canvas.width||this.y<0||this.y>canvas.height)this.reset()}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(57,255,20,${this.opacity})`;ctx.fill()}}
 for(let i=0;i<60;i++)particles.push(new Particle());
 (function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});requestAnimationFrame(animate)})();
 
@@ -486,7 +486,7 @@ const revealObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
 // Contact
-function sendMessage(){const n=document.getElementById('contactName').value,e=document.getElementById('contactEmail').value,m=document.getElementById('contactMsg').value;if(!n||!e||!m){alert('请填写完整信息后再发送');return}const b=event.target;b.textContent='已发送 ✓';b.style.background='linear-gradient(135deg,#00d4ff,#7c5cfc)';setTimeout(()=>{b.textContent='发送消息';b.style.background='';document.getElementById('contactName').value='';document.getElementById('contactEmail').value='';document.getElementById('contactMsg').value=''},2000)}
+function sendMessage(){const n=document.getElementById('contactName').value,e=document.getElementById('contactEmail').value,m=document.getElementById('contactMsg').value;if(!n||!e||!m){alert('请填写完整信息后再发送');return}const b=event.target;b.textContent='已发送 ✓';b.style.background='linear-gradient(135deg,#39ff14,#ff6b00)';setTimeout(()=>{b.textContent='发送消息';b.style.background='';document.getElementById('contactName').value='';document.getElementById('contactEmail').value='';document.getElementById('contactMsg').value=''},2000)}
 
 // Typed
 const heroTag=document.querySelector('.hero-tag');
