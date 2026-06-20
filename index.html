@@ -52,6 +52,16 @@
         .hero-image-info .fi-title{font-size:1rem;font-weight:700;line-height:1.3}
         .hero-image-info .fi-desc{font-size:.75rem;color:var(--text2);margin-top:.3rem;line-height:1.5}
 
+        /* Hero Carousel */
+        .hero-carousel{position:relative;width:100%}
+        .hero-carousel .hc-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:10px 4px 20px}
+        .hero-carousel .hc-track::-webkit-scrollbar{display:none}
+        .hero-carousel .hc-card{flex:0 0 200px;scroll-snap-align:start;position:relative;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform .3s ease;cursor:pointer;background:var(--surface)}
+        .hero-carousel .hc-card:hover{transform:translateY(-4px)}
+        .hero-carousel .hc-card img{width:100%;height:260px;object-fit:cover;display:block}
+        .hero-carousel .hc-card .hc-num{position:absolute;bottom:10px;left:10px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);color:#fff;font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+        .hero-carousel .hc-card .hc-label{position:absolute;bottom:0;left:0;right:0;padding:2.5rem .8rem .6rem;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.3px}
+
         /* Section Common */
         section{padding:6rem 3rem;position:relative}
         .section-header{text-align:center;margin-bottom:3.5rem}
@@ -209,6 +219,8 @@
             .hero-left .subtitle{margin-left:auto;margin-right:auto}
             .hero-btns{justify-content:center}
             .hero-stats{justify-content:center}
+            .hero-carousel .hc-card{flex:0 0 160px}
+            .hero-carousel .hc-card img{height:210px}
             .about-grid{grid-template-columns:1fr;gap:2rem}
             .portfolio-grid{grid-template-columns:1fr}
             .contact-grid{grid-template-columns:1fr}
@@ -253,12 +265,38 @@
             </div>
         </div>
         <div class="hero-right reveal reveal-delay-2">
-            <div class="hero-image-card">
-                <img src="img-brand1.jpg" alt="精选作品">
-                <div class="hero-image-info">
-                    <span class="fi-label">FEATURED PROJECT</span>
-                    <div class="fi-title">白鹅社 White Goose Club</div>
-                    <div class="fi-desc">咖啡品牌全案视觉识别系统设计</div>
+            <div class="hero-carousel">
+                <div class="hc-track">
+                    <div class="hc-card" onclick="openDetail(0)">
+                        <img src="hero-brand1.png" alt="白鹅社" loading="lazy">
+                        <div class="hc-label">白鹅社 White Goose Club</div>
+                        <div class="hc-num">1</div>
+                    </div>
+                    <div class="hc-card" onclick="openDetail(1)">
+                        <img src="hero-brand2.png" alt="醒狮潮阁" loading="lazy">
+                        <div class="hc-label">醒狮潮阁</div>
+                        <div class="hc-num">2</div>
+                    </div>
+                    <div class="hc-card" onclick="openDetail(2)">
+                        <img src="hero-ip.png" alt="GOGO Qilin" loading="lazy">
+                        <div class="hc-label">GOGO Qilin IP设计</div>
+                        <div class="hc-num">3</div>
+                    </div>
+                    <div class="hc-card" onclick="openDetail(3)">
+                        <img src="hero-game.png" alt="游戏UI" loading="lazy">
+                        <div class="hc-label">趣味冒险游戏UI</div>
+                        <div class="hc-num">4</div>
+                    </div>
+                    <div class="hc-card" onclick="openDetail(4)">
+                        <img src="hero-poster.png" alt="海报系列" loading="lazy">
+                        <div class="hc-label">海报系列</div>
+                        <div class="hc-num">5</div>
+                    </div>
+                    <div class="hc-card" onclick="openDetail(5)">
+                        <img src="hero-3d.png" alt="3D视觉" loading="lazy">
+                        <div class="hc-label">3D场景与模型</div>
+                        <div class="hc-num">6</div>
+                    </div>
                 </div>
             </div>
         </div>
