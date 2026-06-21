@@ -268,34 +268,29 @@
             <div class="hero-carousel">
                 <div class="hc-track">
                     <div class="hc-card" onclick="openDetail(0)">
-                        <img src="hero-brand1.png" alt="白鹅社" loading="lazy">
-                        <div class="hc-label">白鹅社 White Goose Club</div>
+                        <img src="hero-brand2.png" alt="醒狮潮阁" loading="lazy">
+                        <div class="hc-label">醒狮潮阁</div>
                         <div class="hc-num">1</div>
                     </div>
                     <div class="hc-card" onclick="openDetail(1)">
-                        <img src="hero-brand2.png" alt="醒狮潮阁" loading="lazy">
-                        <div class="hc-label">醒狮潮阁</div>
+                        <img src="hero-ip.png" alt="GOGO Qilin" loading="lazy">
+                        <div class="hc-label">GOGO Qilin IP设计</div>
                         <div class="hc-num">2</div>
                     </div>
                     <div class="hc-card" onclick="openDetail(2)">
-                        <img src="hero-ip.png" alt="GOGO Qilin" loading="lazy">
-                        <div class="hc-label">GOGO Qilin IP设计</div>
+                        <img src="hero-game.png" alt="游戏UI" loading="lazy">
+                        <div class="hc-label">趣味冒险游戏UI</div>
                         <div class="hc-num">3</div>
                     </div>
                     <div class="hc-card" onclick="openDetail(3)">
-                        <img src="hero-game.png" alt="游戏UI" loading="lazy">
-                        <div class="hc-label">趣味冒险游戏UI</div>
+                        <img src="hero-poster.png" alt="海报系列" loading="lazy">
+                        <div class="hc-label">海报系列</div>
                         <div class="hc-num">4</div>
                     </div>
                     <div class="hc-card" onclick="openDetail(4)">
-                        <img src="hero-poster.png" alt="海报系列" loading="lazy">
-                        <div class="hc-label">海报系列</div>
-                        <div class="hc-num">5</div>
-                    </div>
-                    <div class="hc-card" onclick="openDetail(5)">
                         <img src="hero-3d.png" alt="3D视觉" loading="lazy">
                         <div class="hc-label">3D场景与模型</div>
-                        <div class="hc-num">6</div>
+                        <div class="hc-num">5</div>
                     </div>
                 </div>
             </div>
@@ -315,7 +310,7 @@
         <div class="about-info reveal reveal-delay-2">
             <div class="info-row"><span class="key">姓名</span><span class="val">唐彬</span></div>
             <div class="info-row"><span class="key">职业</span><span class="val">平面设计师</span></div>
-            <div class="info-row"><span class="key">学历</span><span class="val">清远市技师学院 · 广告设计</span></div>
+            <div class="info-row"><span class="key">大专</span><span class="val">清远市技师学院 · 广告设计</span></div>
             <div class="info-row"><span class="key">毕业年份</span><span class="val">2025</span></div>
             <div class="info-row"><span class="key">所在地</span><span class="val">广东省 · 清远</span></div>
             <div class="info-row"><span class="key">邮箱</span><span class="val">1446295818@qq.com</span></div>
@@ -388,78 +383,83 @@
 <script>
 const projects = [
     {
-        id:0, img:'img-brand1.jpg', tag:'品牌设计',
-        title:'白鹅社 White Goose Club',
-        subtitle:'咖啡品牌全案视觉识别系统设计',
-        desc:'为精品咖啡品牌"白鹅社"打造完整的视觉识别系统。以白鹅为品牌符号，构建了从Logo设计到空间应用的全套视觉体系，强调温暖手工感与都市咖啡文化的融合。',
-        tools:['Illustrator','Photoshop','Figma'], year:'2024', scope:'品牌全案', category:'视觉识别系统',
-        highlights:['品牌Logo：白鹅轮廓与咖啡杯形态的巧妙融合','色彩系统：大地棕、奶油白为主调，传递温暖质感','应用覆盖：杯具、纸袋、围裙、店面招牌等全触点','双语排版：中英文标识协调搭配，适配国际化场景'],
-        gallery:[
-            {layout:'single', imgs:[{src:'img-brand1.jpg',crop:'0 0/100% 28%',cap:'品牌Logo与核心视觉识别'}]},
-            {layout:'two-col', imgs:[{src:'img-brand1.jpg',crop:'0 28%/100% 25%',cap:'饮品包装与菜单设计'},{src:'img-brand1.jpg',crop:'0 53%/100% 25%',cap:'品牌应用物料展示'}]},
-            {layout:'single', imgs:[{src:'img-brand1.jpg',crop:'0 78%/100% 22%',cap:'周边产品与空间应用'}]}
-        ]
-    },
-    {
-        id:1, img:'img-brand2.jpg', tag:'品牌设计',
-        title:'醒狮潮风',
+        id:0, img:'img/brand2/未标题-7_画板 1.jpg', tag:'品牌设计',
+        title:'醒狮潮阁 XINGSHICHAOGE',
         subtitle:'传统醒狮文化与现代潮流的融合品牌',
         desc:'以中国传统醒狮文化为灵感，结合当代潮流设计语言，打造具有文化自信的品牌视觉体系。红黑金三色为主色调，传递力量感与时尚感。',
         tools:['Illustrator','Photoshop','After Effects'], year:'2024', scope:'品牌全案', category:'文化潮流品牌',
         highlights:['IP角色：原创醒狮形象，含三视图与动态姿势','色彩策略：深红、墨黑、金色构建强烈文化视觉','应用物料：名片、包装袋、服装吊牌、标识系统','传统与现代平衡：书法字体搭配现代无衬线英文'],
         gallery:[
-            {layout:'single', imgs:[{src:'img-brand2.jpg',crop:'0 0/100% 22%',cap:'品牌Logo与主视觉'}]},
-            {layout:'two-col', imgs:[{src:'img-brand2.jpg',crop:'0 22%/100% 28%',cap:'IP角色三视图与动态延展'},{src:'img-brand2.jpg',crop:'0 50%/100% 28%',cap:'基础系统与应用规范'}]},
-            {layout:'single', imgs:[{src:'img-brand2.jpg',crop:'0 78%/100% 22%',cap:'应用物料与品牌展示'}]}
+            {layout:'single', imgs:[{src:'img/brand2/未标题-7_画板 1.jpg',crop:'center',cap:'品牌Logo与主视觉'}]},
+            {layout:'two-col', imgs:[{src:'img/brand2/未标题-7_画板 1 副本.jpg',crop:'center',cap:'IP角色设计与基础规范'},{src:'img/brand2/未标题-7_画板 1 副本 2.jpg',crop:'center',cap:'色彩系统与字体规范'}]},
+            {layout:'two-col', imgs:[{src:'img/brand2/未标题-7_画板 1 副本 3.jpg',crop:'center',cap:'应用物料展示'},{src:'img/brand2/未标题-7_画板 1 副本 4.jpg',crop:'center',cap:'品牌延展设计'}]},
+            {layout:'single', imgs:[{src:'img/brand2/未标题-7_画板 1 副本 5.jpg',crop:'center',cap:'周边产品与空间应用'}]}
         ]
     },
     {
-        id:2, img:'img-ip.jpg', tag:'IP设计',
+        id:1, img:'img/ip/未标题-5_画板 1.jpg', tag:'IP设计',
         title:'GOGO Qilin',
         subtitle:'原创IP角色设计及文创周边应用',
         desc:'设计原创IP角色"GOGO Qilin"——一位戴眼镜的可爱麒麟男孩，搭配小白猫伙伴。涵盖角色三视图、表情包、服装延展及丰富的文创周边产品。',
         tools:['Illustrator','Photoshop','Figma'], year:'2024', scope:'IP全案', category:'角色设计与周边',
         highlights:['角色设定：完整的世界观和人物小传','三视图展示：正面、侧面、背面标准化建模','表情系统：6种核心表情适配社交场景','周边产品：手机壳、帆布包、帽子、雨伞、玩偶等'],
         gallery:[
-            {layout:'single', imgs:[{src:'img-ip.jpg',crop:'0 0/100% 25%',cap:'IP角色主视觉与角色卡'}]},
-            {layout:'two-col', imgs:[{src:'img-ip.jpg',crop:'0 25%/100% 30%',cap:'三视图展示与表情延展'},{src:'img-ip.jpg',crop:'0 55%/100% 30%',cap:'服装延展与海报设计'}]},
-            {layout:'single', imgs:[{src:'img-ip.jpg',crop:'0 85%/100% 15%',cap:'动态姿势与周边应用'}]}
+            {layout:'single', imgs:[{src:'img/ip/未标题-5_画板 1.jpg',crop:'center',cap:'IP角色主视觉与角色卡'}]},
+            {layout:'two-col', imgs:[{src:'img/ip/未标题-5-02.jpg',crop:'center',cap:'三视图展示与表情延展'},{src:'img/ip/未标题-5-03.jpg',crop:'center',cap:'服装延展与海报设计'}]}
         ]
     },
     {
-        id:3, img:'img-game.jpg', tag:'UI设计',
+        id:2, img:'img/ui/未标题-6_画板 1.jpg', tag:'UI设计',
         title:'趣味冒险游戏UI',
         subtitle:'2D平台跳跃游戏全套界面设计',
         desc:'为一款卡通风格的2D平台跳跃游戏设计完整的UI界面系统。以明亮柔和的粉彩色调为主，涵盖世界地图、装备系统、关卡选择、战斗界面等核心模块。',
         tools:['Photoshop','Figma','Illustrator'], year:'2024', scope:'UI全案', category:'游戏界面设计',
         highlights:['世界地图：开放式关卡选择，融入可爱角色','装备系统：武器栏、属性面板的信息架构设计','关卡选择：解锁/锁定状态的视觉反馈','游戏界面：HUD布局、虚拟摇杆的交互设计'],
         gallery:[
-            {layout:'two-col', imgs:[{src:'img-game.jpg',crop:'0 0/100% 30%',cap:'世界地图场景'},{src:'img-game.jpg',crop:'0 30%/100% 25%',cap:'装备系统设计'}]},
-            {layout:'two-col', imgs:[{src:'img-game.jpg',crop:'0 55%/100% 25%',cap:'关卡选择界面'},{src:'img-game.jpg',crop:'0 80%/100% 20%',cap:'游戏战斗界面'}]}
+            {layout:'two-col', imgs:[{src:'img/ui/未标题-6_画板 1.jpg',crop:'center',cap:'世界地图场景'},{src:'img/ui/未标题-6_画板 1 副本.jpg',crop:'center',cap:'装备系统设计'}]},
+            {layout:'two-col', imgs:[{src:'img/ui/未标题-6_画板 1 副本 2.jpg',crop:'center',cap:'关卡选择界面'},{src:'img/ui/未标题-6-04.jpg',crop:'center',cap:'游戏战斗界面'}]}
         ]
     },
     {
-        id:4, img:'img-poster.jpg', tag:'海报设计',
+        id:3, img:'img/poster/未标题-3_画板 1.jpg', tag:'海报设计',
         title:'海报系列',
         subtitle:'多元风格海报创作合集',
         desc:'一组跨越多种风格的海报设计作品。从商业饮品推广到传统水墨意境，从几何抽象到光学视错觉，每张海报都独立呈现独特的视觉表达。',
         tools:['Photoshop','Illustrator','After Effects'], year:'2023-2024', scope:'系列创作', category:'商业与艺术海报',
         highlights:['商业类：饮品推广海报，融合产品摄影与插画','传统文化：水墨意境海报，致敬中国山水画','视觉实验：光学隧道、几何构成等抽象探索','插画风格：天气主题、趣味插画海报'],
         gallery:[
-            {layout:'single', imgs:[{src:'img-poster.jpg',crop:'0 0/100% 50%',cap:'商业推广与传统文化海报'}]},
-            {layout:'single', imgs:[{src:'img-poster.jpg',crop:'0 50%/100% 50%',cap:'抽象视觉与插画风格海报'}]}
+            {layout:'single', imgs:[{src:'img/poster/未标题-3_画板 1.jpg',crop:'center',cap:'商业推广与传统文化海报'}]},
+            {layout:'two-col', imgs:[{src:'img/poster/未标题-3-02.jpg',crop:'center',cap:'几何抽象与视觉实验'},{src:'img/poster/未标题-3-03.jpg',crop:'center',cap:'光影与材质表现'}]},
+            {layout:'two-col', imgs:[{src:'img/poster/未标题-3-04.jpg',crop:'center',cap:'构图与排版设计'},{src:'img/poster/未标题-3-05.jpg',crop:'center',cap:'色彩与情绪表达'}]},
+            {layout:'single', imgs:[{src:'img/poster/未标题-3-06.jpg',crop:'center',cap:'抽象视觉与插画风格海报'}]},
+            {layout:'two-col', imgs:[{src:'img/poster/未标题-3-07.jpg',crop:'center',cap:'细节刻画与纹理处理'},{src:'img/poster/未标题-3-08.jpg',crop:'center',cap:'创意概念与执行'}]},
+            {layout:'single', imgs:[{src:'img/poster/未标题-3-09.jpg',crop:'center',cap:'综合技法展示'}]},
+            {layout:'single', imgs:[{src:'img/poster/未标题-3-10.jpg',crop:'center',cap:'最终效果与输出'}]}
         ]
     },
     {
-        id:5, img:'img-3d.jpg', tag:'3D视觉',
+        id:4, img:'img/3d/未标题-2_画板 1.jpg', tag:'3D视觉',
         title:'3D场景与模型渲染',
         subtitle:'涵盖场景搭建、建模及环境渲染',
         desc:'一组3D视觉创作合集，展示从写实场景搭建到低面数建模、从抽象艺术到环境渲染的多维能力。',
         tools:['Unreal Engine','Photoshop','Blender'], year:'2023-2024', scope:'个人探索', category:'3D建模与渲染',
         highlights:['场景搭建：户外静物场景的光影与材质','车辆建模：低面数运动车辆3D模型','机械设计：模块化机械组件概念设计','抽象艺术：发光粒子与碎片化数字视觉'],
         gallery:[
-            {layout:'two-col', imgs:[{src:'img-3d.jpg',crop:'0 0/100% 25%',cap:'户外场景渲染'},{src:'img-3d.jpg',crop:'0 25%/100% 25%',cap:'运动车辆建模'}]},
-            {layout:'two-col', imgs:[{src:'img-3d.jpg',crop:'0 50%/100% 25%',cap:'机械结构设计'},{src:'img-3d.jpg',crop:'0 75%/100% 25%',cap:'抽象视觉与环境渲染'}]}
+            {layout:'two-col', imgs:[{src:'img/3d/未标题-2_画板 1.jpg',crop:'center',cap:'户外场景渲染'},{src:'img/3d/未标题-2-02.jpg',crop:'center',cap:'运动车辆建模'}]},
+            {layout:'two-col', imgs:[{src:'img/3d/未标题-2-03.jpg',crop:'center',cap:'机械结构设计'},{src:'img/3d/未标题-2-04.jpg',crop:'center',cap:'材质与贴图测试'}]},
+            {layout:'single', imgs:[{src:'img/3d/未标题-2-05.jpg',crop:'center',cap:'抽象视觉与环境渲染'}]}
+        ]
+    },
+    {
+        id:5, img:'img/brand1/未标题-4_画板 1.jpg', tag:'品牌设计',
+        title:'白鹅社 White Goose Club',
+        subtitle:'咖啡品牌全案视觉识别系统设计',
+        desc:'为精品咖啡品牌"白鹅社"打造完整的视觉识别系统。以白鹅为品牌符号，构建了从Logo设计到空间应用的全套视觉体系，强调温暖手工感与都市咖啡文化的融合。',
+        tools:['Illustrator','Photoshop','Figma'], year:'2024', scope:'品牌全案', category:'视觉识别系统',
+        highlights:['品牌Logo：白鹅轮廓与咖啡杯形态的巧妙融合','色彩系统：大地棕、奶油白为主调，传递温暖质感','应用覆盖：杯具、纸袋、围裙、店面招牌等全触点','双语排版：中英文标识协调搭配，适配国际化场景'],
+        gallery:[
+            {layout:'single', imgs:[{src:'img/brand1/未标题-4_画板 1.jpg',crop:'center',cap:'品牌Logo与核心视觉识别'}]},
+            {layout:'two-col', imgs:[{src:'img/brand1/未标题-4-02.jpg',crop:'center',cap:'饮品包装与菜单设计'},{src:'img/brand1/未标题-4-03.jpg',crop:'center',cap:'品牌应用物料展示'}]}
         ]
     }
 ];
@@ -524,10 +524,12 @@ function openDetail(idx) {
     carouselTotal = slides.length;
     carouselIdx = 0;
 
-    let slidesHTML = slides.map((s, i) => `
+    let slidesHTML = slides.map((s, i) => {
+        const bgPos = s.crop === 'center' ? 'center center' : s.crop;
+        return `
         <div class="carousel-slide">
             <div class="slide-img-wrap">
-                <div class="slide-img" style="background:url('${s.src}') no-repeat;background-size:100% auto;background-position:${s.crop}"></div>
+                <div class="slide-img" style="background:url('${s.src}') no-repeat center;background-size:contain"></div>
             </div>
             <div class="slide-info">
                 <div class="cap-left">
@@ -537,7 +539,7 @@ function openDetail(idx) {
                 <span class="cap-num">${i + 1} / ${carouselTotal}</span>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     let dotsHTML = slides.map((_, i) =>
         `<button class="carousel-dot ${i === 0 ? 'active' : ''}" onclick="goSlide(${i})"></button>`
