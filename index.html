@@ -530,11 +530,10 @@ function openDetail(idx) {
     carouselIdx = 0;
 
     let slidesHTML = slides.map((s, i) => {
-        const bgPos = s.crop === 'center' ? 'center center' : s.crop;
         return `
         <div class="carousel-slide">
-            <div class="slide-img-wrap">
-                <div class="slide-img" style="background:url('${s.src}') no-repeat center;background-size:contain"></div>
+            <div class="slide-img-wrap" style="background:#fff">
+                <img src="${s.src}" alt="${s.cap}" style="width:100%;height:auto;display:block;object-fit:contain">
             </div>
             <div class="slide-info">
                 <div class="cap-left">
